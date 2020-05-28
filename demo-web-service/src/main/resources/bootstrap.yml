@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: goods-service-admin
+  profiles:
+    active: dev
+
+server:
+  port: 8899
+
+
+
+
+
+

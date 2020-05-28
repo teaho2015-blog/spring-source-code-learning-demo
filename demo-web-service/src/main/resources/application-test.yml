@@ -1,0 +1,14 @@
+alsf:
+  registry:
+    address:  zookeeper://192.168.3.3:2181|nacos://192.168.3.3:8848
+
+
+
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.3.3:8848
+        namespace: 2ea97dfd-fb1b-42df-9670-b8a0bf2c66cd
