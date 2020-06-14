@@ -1,0 +1,15 @@
+alsf:
+  registry:
+    address:  zookeeper://127.0.0.1:2181
+  app:
+    name: platform_demo_web
+
+
+
+eureka:
+  instance:
+    prefer-ip-address: true
+
+  client:
+    service-url:
+      defaultZone: http://admin:123123@127.0.0.1:8110/eureka

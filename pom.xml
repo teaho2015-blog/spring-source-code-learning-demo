@@ -18,6 +18,8 @@
         <module>demo-web-api</module>
         <module>demo-web-client</module>
         <module>demo-web-service</module>
+        <module>spring-boot-startup</module>
+        <module>spring-boot-none-startup</module>
     </modules>
 
     <properties>
