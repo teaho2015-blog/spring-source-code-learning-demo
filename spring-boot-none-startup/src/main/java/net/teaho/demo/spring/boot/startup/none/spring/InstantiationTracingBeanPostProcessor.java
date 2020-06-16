@@ -1,5 +1,6 @@
 package net.teaho.demo.spring.boot.startup.none.spring;
 
+import net.teaho.demo.spring.boot.startup.none.component.DemoBean;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.stereotype.Component;
 

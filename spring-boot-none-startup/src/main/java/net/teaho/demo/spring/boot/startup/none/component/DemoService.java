@@ -2,6 +2,7 @@ package net.teaho.demo.spring.boot.startup.none.component;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.Map;
@@ -17,9 +18,12 @@ import java.util.Map;
 public class DemoService {
 
     private final Map<String, String> map;
+    @Autowired
+    private DemoBean demoBean;
 
     public void printMap() {
         log.info("map is:{}", map);
+        log.info("demoBean is:{}", demoBean);
     }
 
 }

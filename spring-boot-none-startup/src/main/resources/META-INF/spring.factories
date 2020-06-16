@@ -1,4 +1,6 @@
-
-
 net.teaho.demo.spring.boot.startup.none.spring.spi.DemoSpringLoader=\
 net.teaho.demo.spring.boot.startup.none.spring.spi.DemoSpringLoaderImpl
+
+
+org.springframework.context.ApplicationContextInitializer=\
+net.teaho.demo.spring.boot.startup.none.spring.SimpleApplicationContextInitializer
