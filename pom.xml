@@ -20,6 +20,7 @@
         <module>demo-web-service</module>
         <module>spring-boot-startup</module>
         <module>spring-boot-none-startup</module>
+        <module>spring-boot-reactive-server</module>
     </modules>
 
     <properties>

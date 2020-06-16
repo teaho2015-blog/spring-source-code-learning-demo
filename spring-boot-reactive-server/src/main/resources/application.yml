@@ -1,0 +1,5 @@
+server:
+  port: ${random.int(22000,23000)}
+spring:
+  application:
+    name: spring-boot-startup
