@@ -1,6 +1,33 @@
 net.teaho.demo.spring.boot.startup.none.spring.spi.DemoSpringLoader=\
 net.teaho.demo.spring.boot.startup.none.spring.spi.DemoSpringLoaderImpl
 
-
+# Application Context Initializers
 org.springframework.context.ApplicationContextInitializer=\
 net.teaho.demo.spring.boot.startup.none.spring.SimpleApplicationContextInitializer
+
+
+# PropertySource Loaders
+org.springframework.boot.env.PropertySourceLoader=
+
+# Run Listeners
+org.springframework.boot.SpringApplicationRunListener=\
+net.teaho.demo.spring.boot.startup.none.spring.runlistener.SimpleRunListener
+
+# Error Reporters
+org.springframework.boot.SpringBootExceptionReporter=
+
+
+
+# Application Listeners
+org.springframework.context.ApplicationListener=\
+net.teaho.demo.spring.boot.startup.none.spring.event.SimpleEventListener
+
+
+# Environment Post Processors
+org.springframework.boot.env.EnvironmentPostProcessor=
+
+# Failure Analyzers
+org.springframework.boot.diagnostics.FailureAnalyzer=
+
+# FailureAnalysisReporters
+org.springframework.boot.diagnostics.FailureAnalysisReporter=

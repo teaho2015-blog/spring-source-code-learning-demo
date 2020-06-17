@@ -1,6 +1,6 @@
 package net.teaho.demo.spring.boot.startup.none.spring;
 
-import net.teaho.demo.spring.boot.startup.none.component.DemoBean;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.stereotype.Component;
 
@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
  * @date 2020-05
  * @since 1.0.0
  */
+@Slf4j
 @Component
 public class InstantiationTracingBeanPostProcessor implements BeanPostProcessor {
 
@@ -20,7 +21,7 @@ public class InstantiationTracingBeanPostProcessor implements BeanPostProcessor 
 
     @Override
     public Object postProcessAfterInitialization(Object bean, String beanName) {
-        System.out.println("Bean '" + beanName + "' created : " + bean.toString());
+        log.info("Bean '" + beanName + "' created : " + bean.toString());
         return bean;
     }
 }
