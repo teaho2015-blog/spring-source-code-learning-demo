@@ -1,0 +1,11 @@
+alsf:
+  registry:
+    address:  nacos://172.22.88.55:8848
+
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 172.22.88.55:8848
