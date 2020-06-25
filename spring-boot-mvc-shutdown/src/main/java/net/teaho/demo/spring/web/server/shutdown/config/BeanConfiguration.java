@@ -1,4 +1,4 @@
-package net.teaho.demo.spring.web.server.config;
+package net.teaho.demo.spring.web.server.shutdown.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

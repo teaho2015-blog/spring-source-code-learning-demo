@@ -1,4 +1,4 @@
-package net.teaho.demo.spring.web.server.controller;
+package net.teaho.demo.spring.web.server.shutdown.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
