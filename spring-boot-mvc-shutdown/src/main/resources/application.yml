@@ -3,3 +3,8 @@ server:
 spring:
   application:
     name: spring-boot-startup
+  profiles:
+    active: dev
+management:
+  server:
+    port: 52200

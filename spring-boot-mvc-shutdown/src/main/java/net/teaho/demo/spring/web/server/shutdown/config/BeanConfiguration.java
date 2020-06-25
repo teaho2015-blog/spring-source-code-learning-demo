@@ -1,5 +1,6 @@
 package net.teaho.demo.spring.web.server.shutdown.config;
 
+import net.teaho.demo.spring.web.server.shutdown.bean.SimpleBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -17,5 +18,11 @@ public class BeanConfiguration {
     @Bean
     public Map<String, String> map() {
         return new HashMap<>(1 << 4);
+    }
+
+
+    @Bean(destroyMethod = "selfDestroy")
+    public SimpleBean simpleBean() {
+        return new SimpleBean();
     }
 }
