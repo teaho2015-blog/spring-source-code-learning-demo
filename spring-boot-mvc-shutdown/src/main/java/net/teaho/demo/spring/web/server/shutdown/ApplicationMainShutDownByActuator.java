@@ -1,21 +1,17 @@
 package net.teaho.demo.spring.web.server.shutdown;
 
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.MediaType;
 import org.springframework.util.CollectionUtils;
-import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.Collections;
-import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -25,10 +21,10 @@ import java.util.concurrent.TimeUnit;
  */
 @Slf4j
 @SpringBootApplication
-public class ApplicationMainShutDownByActuactor {
+public class ApplicationMainShutDownByActuator {
 
     public static void main(String[] args) {
-        ConfigurableApplicationContext ctx = SpringApplication.run(ApplicationMainShutDownByActuactor.class, args);
+        ConfigurableApplicationContext ctx = SpringApplication.run(ApplicationMainShutDownByActuator.class, args);
 
         try {
             TimeUnit.SECONDS.sleep(10L);
