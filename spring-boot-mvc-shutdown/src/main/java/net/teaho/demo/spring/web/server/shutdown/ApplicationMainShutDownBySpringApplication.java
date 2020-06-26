@@ -1,6 +1,7 @@
 package net.teaho.demo.spring.web.server.shutdown;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.boot.ExitCodeGenerator;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
@@ -12,6 +13,8 @@ import org.springframework.util.CollectionUtils;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.Collections;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -24,12 +27,15 @@ import java.util.concurrent.TimeUnit;
 public class ApplicationMainShutDownBySpringApplication {
 
     public static void main(String[] args) {
-
         ConfigurableApplicationContext ctx = new SpringApplicationBuilder(ApplicationMainShutDownBySpringApplication.class).build().run(args);
+        int exitCode = SpringApplication.exit(ctx);
+        log.info("exitCode is {}!", exitCode);
+        System.exit(exitCode);
 
-        SpringApplication.exit(ctx);
     }
 
-
-
+    @Bean
+    public ExitCodeGenerator exitCodeGenerator() {
+        return () -> 10;
+    }
 }
