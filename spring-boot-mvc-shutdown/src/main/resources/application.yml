@@ -5,6 +5,6 @@ spring:
     name: spring-boot-startup
   profiles:
     active: dev
-management:
-  server:
-    port: 52200
+#management:
+#  server:
+#    port: 52200

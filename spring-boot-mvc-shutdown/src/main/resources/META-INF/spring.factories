@@ -1,0 +1,5 @@
+# Application Listeners
+org.springframework.context.ApplicationListener=\
+net.teaho.demo.spring.web.server.shutdown.spring.ApplicationContextCloseEventListener
+
+

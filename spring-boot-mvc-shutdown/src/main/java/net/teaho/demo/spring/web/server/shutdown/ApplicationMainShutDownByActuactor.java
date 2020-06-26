@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.client.RestTemplateBuilder;
+import org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpEntity;
@@ -34,11 +35,17 @@ public class ApplicationMainShutDownByActuactor {
         } catch (InterruptedException e) {
             log.error("error", e);
         }
-        String myServerPort = ctx.getEnvironment().getProperty("management.server.port");
-        RestTemplate restTemplate = ctx.getBean("restTemplate", RestTemplate.class);
-        String result = restTemplate.postForObject("http://localhost:" + myServerPort + "/actuator/shutdown", new HttpEntity<String>(CollectionUtils.toMultiValueMap(Collections.singletonMap("Content-Type", Collections.singletonList(MediaType.APPLICATION_JSON_UTF8_VALUE)))), String.class);
-        //print result
-        log.info("Actuator shutdown result: {}", result);
+        if (ctx instanceof AnnotationConfigServletWebServerApplicationContext) {
+            String myServerPort = ((AnnotationConfigServletWebServerApplicationContext) ctx).getWebServer().getPort() + "";
+            RestTemplate restTemplate = ctx.getBean("restTemplate", RestTemplate.class);
+            String result = restTemplate.postForObject("http://localhost:" + myServerPort + "/actuator/shutdown", new HttpEntity<String>(CollectionUtils.toMultiValueMap(Collections.singletonMap("Content-Type", Collections.singletonList(MediaType.APPLICATION_JSON_UTF8_VALUE)))), String.class);
+            //print result
+            log.info("Actuator shutdown result: {}", result);
+        } else {
+            log.error("did you change the dependencies? or custom a not servlet web app context?");
+        }
+
+
     }
 
     @Bean
