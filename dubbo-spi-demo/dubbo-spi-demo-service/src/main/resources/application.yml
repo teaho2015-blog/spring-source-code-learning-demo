@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: demo-service
+server:
+  port: 7910
+
+dubbo:
+  application:
+    name: ${spring.application.name}
+    qosEnable: true
+    qosPort: ${random.int(44000,44100)}
+    qosAcceptForeignIp: false
+  registry:
+    address: nacos://192.168.1.102:8848
+    check: false
+  monitor:
+    protocol: register
+  consumer:
+    check:  true
+    timeout: 5000
+#    group: ${dubbo.application.group}
+  provider:
+    filter: demomonitor
+#    group: ${dubbo.application.group}
+  protocol:
+    name: dubbo
+    port: 22301
+    accesslog: true

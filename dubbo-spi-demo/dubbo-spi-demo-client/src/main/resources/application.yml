@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: demo-client
+
+server:
+  port: 22201
+
+dubbo:
+  application:
+    name: ${spring.application.name}
+    qosEnable: true
+    qosPort: ${random.int(44000,44100)}
+    qosAcceptForeignIp: false
+  registry:
+    address: nacos://192.168.1.102:8848
+    check: false
+  monitor:
+    protocol: register
+  consumer:
+    check:  true
+    timeout: 5000
+

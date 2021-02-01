@@ -1,0 +1,3 @@
+md5=net.teaho.demo.dubbo.spi.service.impl.ActivateMD5PwdExtension
+base64=net.teaho.demo.dubbo.spi.service.impl.ActivateBase64PwdExtension
+specialmd5=net.teaho.demo.dubbo.spi.service.impl.ActivateSpecialMD5PwdExtension

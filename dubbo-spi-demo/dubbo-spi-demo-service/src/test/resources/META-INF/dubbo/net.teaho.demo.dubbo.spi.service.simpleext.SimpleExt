@@ -1,0 +1,5 @@
+# Comment 1
+impl1=net.teaho.demo.dubbo.spi.service.simpleext.impl.SimpleExtImpl1#Hello World
+impl2=net.teaho.demo.dubbo.spi.service.simpleext.impl.SimpleExtImpl2  # Comment 2
+   impl3=net.teaho.demo.dubbo.spi.service.simpleext.impl.SimpleExtImpl3 # with head space
+#impl4=net.teaho.demo.dubbo.spi.service.simpleext.impl.SimpleExtImpl4 # with head space
