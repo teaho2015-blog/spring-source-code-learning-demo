@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: external-config-demo
+server:
+  port: 7910
+
+
+simple:
+  config:
+    bean:
+      enabled: true
+      host: externalized-configuration
+      ip: localhost
+    annotated:
+      enabled: true
+      host: annotated-config-bean
+      ip: 127.0.0.1
