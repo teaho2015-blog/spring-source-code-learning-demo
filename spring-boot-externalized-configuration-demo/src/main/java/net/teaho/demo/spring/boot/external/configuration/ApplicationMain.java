@@ -24,6 +24,7 @@ public class ApplicationMain {
 
         log.info("===" + ctx.getBean(SimpleConfigProperties.class));
         log.info("===" + ctx.getBean(SimpleAnnotatedEnableConfigProperties.class));
+
 //        CountDownLatch cdl = new CountDownLatch(1);
 //        cdl.await();
     }
