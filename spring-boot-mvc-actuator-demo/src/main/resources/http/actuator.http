@@ -1,0 +1,42 @@
+### demo
+POST http://localhost:{{port}}/demo/time
+
+### simple
+GET http://localhost:{{port}}/actuator/simple
+
+### beans
+GET http://localhost:{{port}}/actuator/beans
+
+### health
+GET http://localhost:{{port}}/actuator/health
+
+### httptrace
+GET http://localhost:{{port}}/actuator/httptrace
+
+### info
+GET http://localhost:{{port}}/actuator/info
+Content-Type: application/json
+
+### metrics
+GET http://localhost:{{port}}/actuator/metrics
+
+### 单个metrics指标
+GET http://localhost:{{port}}/actuator/metrics/jvm.memory.max
+
+### 自定义的metrics指标
+GET http://localhost:{{port}}/actuator/metrics/received.messages
+
+
+### mappings
+GET http://localhost:{{port}}/actuator/mappings
+
+### shutdown
+POST http://localhost:{{port}}/actuator/shutdown
+
+### threaddump
+GET http://localhost:{{port}}/actuator/threaddump
+
+###
+GET http://localhost:{{port}}/actuator/metrics/jvm.memory.max
+
+

@@ -1,0 +1,18 @@
+
+
+spring:
+  main:
+    allow-bean-definition-overriding: true
+management:
+  endpoint:
+    shutdown:
+      enabled: true
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+demo:
+  health:
+    status: false
