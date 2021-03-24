@@ -1,0 +1,10 @@
+server:
+  port: 22700
+spring:
+  application:
+    name: spring-cloud-context-demo
+
+clientA:
+  simple:
+    SimpleRuleClassName: net.teaho.demo.spring.cloud.context.named.app.RuleImplA
+
