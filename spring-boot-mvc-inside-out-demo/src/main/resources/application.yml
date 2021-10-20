@@ -1,0 +1,10 @@
+server:
+  port: 22200
+spring:
+  application:
+    name: spring-boot-mvc-inside-out-demo
+  profiles:
+    active: dev
+#management:
+#  server:
+#    port: 52200
