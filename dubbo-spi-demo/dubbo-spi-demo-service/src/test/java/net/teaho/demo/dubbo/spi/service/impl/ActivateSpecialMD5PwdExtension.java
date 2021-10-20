@@ -5,7 +5,7 @@ import org.apache.dubbo.common.extension.Activate;
 import org.springframework.util.DigestUtils;
 
 /**
- * @author hetl@akulaku.com
+ * @author teaho2015<at>gmail.com
  * @date 2020-07
  * @since 1.0.0
  */

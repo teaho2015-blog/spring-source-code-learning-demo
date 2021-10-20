@@ -3,7 +3,7 @@ package net.teaho.demo.java.spi;
 import java.util.ServiceLoader;
 
 /**
- * @author hetl@akulaku.com
+ * @author teaho2015<at>gmail.com
  * @date 2020-07
  * @since 1.0.0
  */
