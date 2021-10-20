@@ -17,12 +17,12 @@ import java.util.Map;
 @Slf4j
 public class DemoService {
 
-    private final Map<String, String> map;
+    private final Map<String, String> map1;
     @Autowired
     private DemoBean demoBean;
 
     public void printMap() {
-        log.info("map is:{}", map);
+        log.info("map is:{}", map1);
         log.info("demoBean is:{}", demoBean);
     }
 
