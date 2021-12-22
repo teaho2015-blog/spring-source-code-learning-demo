@@ -26,6 +26,7 @@
         <module>spring-boot-mvc-actuator-demo</module>
         <module>spring-cloud-context-demo</module>
         <module>spring-boot-mvc-inside-out-demo</module>
+        <module>spring-cloud-zookeeper-config-demo</module>
 
 
         <!--        <module>dubbo-spi-demo/dubbo-spi-demo-client</module>-->

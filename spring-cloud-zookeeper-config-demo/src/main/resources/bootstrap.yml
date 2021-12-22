@@ -1,0 +1,16 @@
+server:
+  port: 8080
+spring:
+  cloud:
+    zookeeper:
+      enabled: true #Is Zookeeper enabled
+      connect-string: tjwqstaging.zk.hadoop.srv:2181 #Connection string to the Zookeeper cluster
+      max-retries: 3 #Max number of times to retry
+      config:
+        root: config/global #Root folder where the configuration for Zookeeper is kept
+        enabled: true
+#    defaultContext: application #The name of the default context
+  application:
+    name: spring-cloud-zk-config-demo
+  profiles:
+    active: dev
