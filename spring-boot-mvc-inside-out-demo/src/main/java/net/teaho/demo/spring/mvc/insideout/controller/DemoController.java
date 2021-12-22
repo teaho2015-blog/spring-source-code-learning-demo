@@ -29,12 +29,13 @@ public class DemoController {
         throw new IllegalStateException("demo3 exception!!!");
     }
 
-    @PostMapping("/api/body1")
-    public Map<String, Object> body1(@RequestParam String id, Model model) {
+    @PostMapping("/api/body1/{category}")
+    public Map<String, Object> body1(@RequestParam String id, Model model, @PathVariable String category) {
 
-        Map<String, Object> map = new HashMap<>();
+        Map<String, Object> map = new HashMap<>(1<<3);
         map.put("id", id);
         map.put("model", model);
+        map.put("category", category);
         return map;
     }
 
