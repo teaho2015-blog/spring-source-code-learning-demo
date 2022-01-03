@@ -1,0 +1,22 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.1.103:8848
+#        namespace: 73a09773-c00d-482e-a793-68a6b98b9f0a
+
+eureka:
+  instance:
+    instance-id: ${spring.application.name}-${random.int(10000)}:${server.port}
+    prefer-ip-address: true
+    metadata-map:
+      zone: dev
+  client:
+    registerWithEureka: true
+    service-url:
+      defaultZone: http://admin:123123@localhost:8110/eureka
+
+
+

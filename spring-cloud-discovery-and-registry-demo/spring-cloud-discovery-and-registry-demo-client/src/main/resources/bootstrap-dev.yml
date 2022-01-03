@@ -1,0 +1,48 @@
+server:
+  port: 8001
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.1.103:8848
+
+feign:
+  hystrix:
+    enabled: true
+
+# default config
+ribbon:
+  NFLoadBalancerRuleClassName: net.teaho.demo.spring.cloud.discovery.client.ribbon.SimpleRule
+  ServerListRefreshInterval: 5000
+spring-cloud-web-demo:
+  ribbon:
+    NFLoadBalancerRuleClassName: net.teaho.demo.spring.cloud.discovery.client.ribbon.SimpleRule
+    ServerListRefreshInterval: 5000
+
+eureka:
+  instance:
+    instance-id: ${spring.application.name}-${random.int(10000)}:${server.port}
+    prefer-ip-address: true
+    metadata-map:
+      zone: dev
+  client:
+    registerWithEureka: false
+    service-url:
+      defaultZone: http://admin:123123@localhost:8110/eureka
+
+management:
+  endpoint:
+    shutdown:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+
+
+
+
+

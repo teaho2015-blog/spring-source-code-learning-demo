@@ -1,0 +1,5 @@
+server:
+  port: 28010
+spring:
+  application:
+    name: spring-cloud-discovery-and-registry-demo-service

@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+net.teaho.demo.spring.cloud.discovery.api.config.ClientAutoConfiguration
