@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
 
 /**
- * @author hetl@akulaku.com
+ * @author teaho2015<at>gmail.com
  * @date 2020-08
  * @since 1.0.0
  */

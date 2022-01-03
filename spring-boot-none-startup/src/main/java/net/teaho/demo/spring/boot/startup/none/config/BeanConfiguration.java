@@ -18,7 +18,12 @@ import java.util.*;
 public class BeanConfiguration {
 
     @Bean
-    public Map<String, String> map() {
+    public Map<String, String> map1() {
+        return new HashMap<>(1 << 4);
+    }
+
+    @Bean
+    public Map<String, String> map2() {
         return new HashMap<>(1 << 4);
     }
 
@@ -35,4 +40,5 @@ public class BeanConfiguration {
         log.info(inst.toString());
         return new Object();
     }
+
 }

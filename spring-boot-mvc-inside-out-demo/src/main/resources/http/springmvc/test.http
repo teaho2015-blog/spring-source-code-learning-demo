@@ -1,0 +1,31 @@
+#> {% client.global.set("port", 22200); %}
+
+# demo
+POST http://localhost:{{port}}/demo/time
+
+###
+
+# demo2
+
+POST http://localhost:{{port}}/demo2/time
+
+###
+
+# demo3
+
+POST http://localhost:{{port}}/demo3/time?key=1
+
+
+###
+
+# body1
+
+POST http://localhost:{{port}}/api/body1/cate
+Content-Type: application/x-www-form-urlencoded
+
+id=99&content=new-element
+
+###
+
+
+

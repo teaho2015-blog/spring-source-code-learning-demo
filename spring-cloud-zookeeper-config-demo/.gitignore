@@ -1,0 +1,7 @@
+.idea/
+*.iws
+*.iml
+*.ipr
+target/
+.mvn*
+.flattened-pom.xml

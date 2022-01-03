@@ -23,7 +23,7 @@ import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
 import static org.junit.Assert.assertEquals;
 
 /**
- * @author hetl@akulaku.com
+ * @author teaho2015<at>gmail.com
  * @date 2020-09
  * @since 1.0.0
  */

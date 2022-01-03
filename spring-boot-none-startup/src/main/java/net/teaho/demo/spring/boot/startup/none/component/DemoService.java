@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 import java.util.Map;
 
 /**
- * @author hetl@akulaku.com
+ * @author teaho2015<at>gmail.com
  * @date 2020-06
  * @since 1.0.0
  */
@@ -17,12 +17,12 @@ import java.util.Map;
 @Slf4j
 public class DemoService {
 
-    private final Map<String, String> map;
+    private final Map<String, String> map1;
     @Autowired
     private DemoBean demoBean;
 
     public void printMap() {
-        log.info("map is:{}", map);
+        log.info("map is:{}", map1);
         log.info("demoBean is:{}", demoBean);
     }
 
