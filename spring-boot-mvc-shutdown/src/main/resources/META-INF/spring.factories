@@ -1,5 +1,6 @@
 # Application Listeners
 org.springframework.context.ApplicationListener=\
-net.teaho.demo.spring.web.server.shutdown.spring.ApplicationContextCloseEventListener
+net.teaho.demo.spring.boot.web.server.shutdown.spring.ApplicationContextCloseEventListener,\
+org.springframework.boot.context.ApplicationPidFileWriter
 
 

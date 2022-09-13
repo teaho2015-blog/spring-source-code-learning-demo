@@ -5,6 +5,10 @@ spring:
     name: spring-boot-startup
   profiles:
     active: dev
+  pid:
+    fail-on-write-error: true
+    #可通过此文件里的pid去关闭应用
+    file: ./application.pid
 #management:
 #  server:
 #    port: 52200
