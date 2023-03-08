@@ -45,7 +45,7 @@
         <bucket4j-core.version>4.0.0</bucket4j-core.version>
         <spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
         <resource.delimiter>#</resource.delimiter>
-        <dubbo.version>2.7.15</dubbo.version>
+        <dubbo.version>2.7.21</dubbo.version>
         <nacos-starter.version>0.9.0.RELEASE</nacos-starter.version>
         <nacos.version>1.1.4</nacos.version>
     </properties>
