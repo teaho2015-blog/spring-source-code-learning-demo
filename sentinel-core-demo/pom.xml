@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>sentinel-core-demo</artifactId>
-    <name>hystrix core demo</name>
+    <name>sentinel core demo</name>
 
     <dependencies>
 
@@ -28,6 +28,11 @@
             <artifactId>lombok</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>com.alibaba.csp</groupId>
+            <artifactId>sentinel-transport-simple-http</artifactId>
+            <version>1.8.6</version>
+        </dependency>
 
         <dependency>
             <groupId>junit</groupId>

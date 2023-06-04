@@ -6,7 +6,6 @@ import com.alibaba.csp.sentinel.slots.block.BlockException;
 import com.alibaba.csp.sentinel.slots.block.RuleConstant;
 import com.alibaba.csp.sentinel.slots.block.flow.FlowRule;
 import com.alibaba.csp.sentinel.slots.block.flow.FlowRuleManager;
-import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +17,6 @@ import java.util.concurrent.TimeUnit;
  */
 public class TestMain {
 
-//    @Test
     public static void main(String[] args) {
         // 配置规则.
         initFlowRules();

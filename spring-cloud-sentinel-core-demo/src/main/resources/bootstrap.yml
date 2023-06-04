@@ -1,0 +1,17 @@
+spring:
+  cloud:
+    sentinel:
+      datasource:
+        ds1:
+          zk:
+            server-addr:
+            path: /mi-global/sentinel-rule-config/${spring.application.name}
+            rule-type: flow
+        ds2:
+          zk:
+            server-addr:
+            path: /mi-global/sentinel-rule-config/${spring.application.name}
+            rule-type: degrade
+      transport:
+        dashboard: http://sgp-sentinel-dashboard.global.alb.xiaomi.srv
+      eager: true
