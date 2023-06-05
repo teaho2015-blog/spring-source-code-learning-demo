@@ -1,4 +1,10 @@
+server:
+  port: 22260
 spring:
+  profiles:
+    active: dev
+  application:
+    name: spring-cloud-sentinel-core-demo
   cloud:
     sentinel:
       datasource:
