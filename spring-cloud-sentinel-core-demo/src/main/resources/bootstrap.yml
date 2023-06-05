@@ -13,5 +13,5 @@ spring:
             path: /mi-global/sentinel-rule-config/${spring.application.name}
             rule-type: degrade
       transport:
-        dashboard: http://sgp-sentinel-dashboard.global.alb.xiaomi.srv
+        dashboard:
       eager: true
