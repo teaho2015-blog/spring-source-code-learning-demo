@@ -5,7 +5,7 @@ import com.alibaba.csp.sentinel.slotchain.ResourceWrapper;
 import com.alibaba.csp.sentinel.slots.block.BlockException;
 
 /**
- * @author hetingleong@xiaomi.com
+ * @author teaho2015@gmail.com
  * @date 2023-06
  */
 public class SimpleAdvancedMetricExtension implements AdvancedMetricExtension {
