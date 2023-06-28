@@ -4,6 +4,7 @@ import com.alibaba.csp.sentinel.Entry;
 import com.alibaba.csp.sentinel.EntryType;
 import com.alibaba.csp.sentinel.SphU;
 import com.alibaba.csp.sentinel.Tracer;
+import com.alibaba.csp.sentinel.context.ContextUtil;
 import com.alibaba.csp.sentinel.slots.block.BlockException;
 import com.alibaba.csp.sentinel.slots.block.RuleConstant;
 import com.alibaba.csp.sentinel.slots.block.flow.FlowRule;
@@ -24,10 +25,11 @@ public class ApplicationMain {
         // 配置规则.
         initFlowRules();
 
-        while (true) {
+        for (int i=0; i<1; i++) {
             // 1.5.0 版本开始可以直接利用 try-with-resources 特性
             Entry entry = null;
             try {
+                ContextUtil.enter("entrance1", "appA");
                 entry = SphU.entry("HelloWorld", EntryType.OUT, 1, new Object[0]);
                 // 被保护的逻辑
                 System.out.println("hello world");
