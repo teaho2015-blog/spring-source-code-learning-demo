@@ -11,12 +11,12 @@ spring:
         ds1:
           zk:
             server-addr:
-            path: /mi-global/sentinel-rule-config/${spring.application.name}
+            path: /mi-global/sentinel-rule-config/${spring.application.name}/flow
             rule-type: flow
         ds2:
           zk:
             server-addr:
-            path: /mi-global/sentinel-rule-config/${spring.application.name}
+            path: /mi-global/sentinel-rule-config/${spring.application.name}/degrade
             rule-type: degrade
       transport:
         dashboard:
