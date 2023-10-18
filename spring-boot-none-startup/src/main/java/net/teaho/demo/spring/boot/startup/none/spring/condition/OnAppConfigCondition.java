@@ -21,6 +21,8 @@ import org.springframework.util.MultiValueMap;
 import org.springframework.util.StringUtils;
 
 /**
+ * @author teaho2015@gmail.com
+ * @date 2023-10
  */
 @Order(Ordered.HIGHEST_PRECEDENCE + 40)
 class OnAppConfigCondition extends SpringBootCondition {
