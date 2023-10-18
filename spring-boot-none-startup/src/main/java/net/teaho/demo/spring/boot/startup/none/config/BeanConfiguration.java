@@ -1,6 +1,8 @@
 package net.teaho.demo.spring.boot.startup.none.config;
 
 import lombok.extern.slf4j.Slf4j;
+import net.teaho.demo.spring.boot.startup.none.common.Constant;
+import net.teaho.demo.spring.boot.startup.none.spring.condition.ConditionalOnAppConfig;
 import net.teaho.demo.spring.boot.startup.none.spring.spi.DemoSpringLoader;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -40,5 +42,20 @@ public class BeanConfiguration {
         log.info(inst.toString());
         return new Object();
     }
+
+    @Bean
+    @ConditionalOnAppConfig(Constant.APP_NAME_3)
+    public Map<String, String> map3() {
+        return new HashMap<>(1 << 4);
+    }
+
+
+    @Bean
+    @ConditionalOnAppConfig(Constant.APP_NAME_4)
+    public Map<String, String> map4() {
+        return new HashMap<>(1 << 4);
+    }
+
+
 
 }
