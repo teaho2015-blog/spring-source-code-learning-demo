@@ -2,9 +2,11 @@ package net.teaho.demo.spring.boot.startup.none.config;
 
 import lombok.extern.slf4j.Slf4j;
 import net.teaho.demo.spring.boot.startup.none.common.Constant;
+import net.teaho.demo.spring.boot.startup.none.spring.condition.AnyServiceBeanCondition;
 import net.teaho.demo.spring.boot.startup.none.spring.condition.ConditionalOnAppConfig;
 import net.teaho.demo.spring.boot.startup.none.spring.spi.DemoSpringLoader;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Conditional;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.support.SpringFactoriesLoader;
 
@@ -29,15 +31,13 @@ public class BeanConfiguration {
         return new HashMap<>(1 << 4);
     }
 
-
     /**
      * 加载自定义Spring SPI, 若想在创建对象时加构造参数，参考SpringApplication的几个getSpringFactoriesInstances private方法
-     * @return
      */
     @Bean
     public Object testSpringSPI() {
         List<DemoSpringLoader> inst = new ArrayList<>(
-                SpringFactoriesLoader.loadFactories(DemoSpringLoader.class, this.getClass().getClassLoader()));
+            SpringFactoriesLoader.loadFactories(DemoSpringLoader.class, this.getClass().getClassLoader()));
 
         log.info(inst.toString());
         return new Object();
@@ -49,13 +49,17 @@ public class BeanConfiguration {
         return new HashMap<>(1 << 4);
     }
 
-
     @Bean
     @ConditionalOnAppConfig(Constant.APP_NAME_4)
     public Map<String, String> map4() {
         return new HashMap<>(1 << 4);
     }
 
+    @Bean
+    @Conditional(AnyServiceBeanCondition.class)
+    public Map<String, String> map5() {
+        return new HashMap<>(1 << 4);
+    }
 
 
 }
