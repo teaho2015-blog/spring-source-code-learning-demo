@@ -28,6 +28,7 @@
         <module>spring-cloud-context-demo</module>
         <module>hystrix-core-demo</module>
         <module>spring-boot-mvc-inside-out-demo</module>
+        <module>spring-boot-aop-inside-out-demo</module>
         <module>spring-cloud-zookeeper-config-demo</module>
         <module>sentinel-core-demo</module>
         <module>spring-cloud-sentinel-core-demo</module>
