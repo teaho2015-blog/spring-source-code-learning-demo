@@ -12,7 +12,6 @@ import java.util.Arrays;
 import java.util.Objects;
 
 @Aspect
-@Component
 public class LogAspect {
 
     private static Logger log = LoggerFactory.getLogger("ThriftAccess");
